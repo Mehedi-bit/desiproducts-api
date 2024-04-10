@@ -4,12 +4,11 @@ const Product = require('../models/product.model.js')
 const createProduct = async (req, res) => {
     const product = new Product({
         name: req.body.name,
-        desc: req.body.desc,
-        img: req.body.img,
-        category: req.body.category,
+        desc: req.body.desc || 'No description available',
+        img: req.body.img || '',
+        category: req.body.category || 'General',
         country: req.body.country,
         qualityGood: req.body.qualityGood,
-        verified: req.body.verified
     })
 
     try {
