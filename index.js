@@ -28,11 +28,11 @@ app.get('/',  (req, res) => {
 
 
 // Database connection
-mongoose.connect(process.env.CONNECTION_STRING)
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
         console.log("Connected to database!")
-        app.listen(3000, () => {
-            console.log("Server running on port 3000")
+        app.listen(5000, () => {
+            console.log("Server running on port 5000")
         })
     })
 
