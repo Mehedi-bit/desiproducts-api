@@ -9,12 +9,14 @@ const productSchema = new mongoose.Schema({
     
     desc: {
         type: String,
-        required: false
+        required: false,
+        default: 'No description available'
     },
 
     img: {
         type: String,
-        required: false
+        required: false,
+        default: '',
     },
 
     category: {
